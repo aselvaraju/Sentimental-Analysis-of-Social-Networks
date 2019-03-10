@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="sentimental.master.cs" Inherits="sentimental" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Styles/StyleSheet.css" type="text/css" rel="Stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <style type="text/css">
+        .auto-style1 {
+            width: 203px;
+        }
+         .auto-style2 {
+            width: 632px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+     <%--   <table style="width:1340px;height:100px">
+        <tr>
+            <td style="text-align: center;font-size: x-large; font-weight: bold; background-color: #663300; color: #FFFFFF;">
+                <asp:Label ID="Label1" runat="server" Text="SENTIMENTAL DATA ANALYSIS" Font-Bold="True" Font-Names="Cambria"></asp:Label>
+            </td>
+        </tr>
+    </table>--%>
+         <table style="width:1340px;height:100px; background-color: #666666;">
+        <tr>
+            <td style="text-align: center;font-size: x-large; font-weight: bold;color: #FFFFFF;">
+                <asp:Label ID="Label1" runat="server" Text="SENTIMENTAL DATA ANALYSIS" Font-Bold="True" Font-Names="Cambria"></asp:Label>
+            </td>
+        </tr>
+    </table>
+        <table style="width:1340px;height:30px; background-color: #000000;">
+            <tr>
+                <td>
+
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td style="vertical-align: top">
+                       <fieldset style="height: 404px; width: 235px;">
+            <legend style="color: #800000; font-size: small; font-weight: bold">
+                Menu Item
+            </legend>
+                 <table style="width: 220px; height: 348px">
+                     <tr>
+                        <td class="auto-style1" style="background-color: #CCCCCC">
+                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/adhome.aspx" >Home</asp:HyperLink>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="auto-style1" style="background-color: #CCCCCC">
+                            <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/datatraining.aspx" >Data Training</asp:HyperLink>
+                        </td>
+                    </tr>
+                      <tr>
+                        <td class="auto-style1" style="background-color: #CCCCCC">
+                            <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/uploaddata.aspx" >Upload Dataset</asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1" style="background-color: #CCCCCC">
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/viewdata.aspx" >View Data</asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1" style="background-color: #CCCCCC">
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/analyzedata.aspx">Analyze Data</asp:HyperLink>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="auto-style1" style="background-color: #CCCCCC">
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/deepanalysis.aspx">Deep Analysis</asp:HyperLink>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="auto-style1" style="background-color: #CCCCCC">
+                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ranking.aspx">Ranking</asp:HyperLink>
+                        </td>
+                    </tr>  
+                      <tr>
+                        <td class="auto-style1" style="background-color: #CCCCCC">
+                            <%--<asp:HyperLink ID="HyperLink4" runat="server">Clear db</asp:HyperLink>--%>
+                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" ForeColor="Red">Clear db</asp:LinkButton>
+                        </td>
+                    </tr>  
+                      <tr>
+                        <td class="auto-style1" style="background-color: #CCCCCC">
+                            <asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/Intrusiondetection.aspx">IDS</asp:HyperLink>
+                        </td>
+                    </tr>  
+                     <tr>
+                        <td class="auto-style1" style="background-color: #CCCCCC">
+                            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/performance.aspx">Reports</asp:HyperLink>
+                        </td>
+                    </tr>  
+                     <tr>
+                        <td class="auto-style1" style="background-color: #CCCCCC">
+                            <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/changepassword.aspx">Change Password</asp:HyperLink>
+                        </td>
+                    </tr>         
+                    <tr>
+                        <td class="auto-style1" style="background-color: #CCCCCC">
+                            <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/index.aspx">Logout</asp:HyperLink>
+                        </td>
+                    </tr>
+                </table>
+                      </fieldset>
+                </td>
+                <td style="vertical-align: top">
+                    <fieldset style="background-color: #C0C0C0; color: #663300;">
+        <legend></legend>
+            <table style="width: 1055px">
+            <tr>
+                <td style="text-align: center;" class="auto-style2">
+                    <asp:Label ID="Label2" runat="server" Text="Welcome" Font-Size="12pt"></asp:Label>
+                    &nbsp;<asp:Label ID="lblusername" runat="server" Text="username" Font-Size="12pt"></asp:Label>
+                </td>
+                    <td>
+                        <asp:Label ID="Label3" runat="server" Text="Current Date :"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lbldate" runat="server" Text="Label"></asp:Label>
+                    </td>
+               
+                    <td>
+                        <asp:Label ID="Label4" runat="server" Text="Current Time :"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lbltime" runat="server" Text="Label"></asp:Label>
+                    </td>
+                </tr>
+        </table>
+    </fieldset>
+     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>
